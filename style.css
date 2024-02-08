@@ -1,8 +1,46 @@
 /* Archivo de estilos de mi proyecto
    v1.0 | 20210203
 */
+header{
+   /*background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);*/
+   background-color: #343a40;
+   padding: 20px 0;
 
-@media screen and (max-width:480px){
-/* Codigo Responsivo */
+}
+.header-container{
+   display: flex;  
+}
 
+.header-container div{
+   margin: 5px;
+   text-align: left;
+   color: white;
+   
+}
+
+.titulo-imagen{
+   width: 3.5rem;
+   max-width: 100%;
+   height: auto;
+   border-style: solid;
+   display: block;
+}
+
+.titulo-texto{
+   font-size: 1.25rem;
+   line-height: 1.75rem;
+}
+
+.subtexto{
+   font-size: .75rem;
+   line-height: 1rem;
+}
+
+body{
+   background-color: #696969;
+}
+footer{
+   /*background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);*/
+   background-color: #343a40;
+   padding: 40px 0;
 }

@@ -3,31 +3,48 @@
 <html lang="es">
     
     <head>
-
         <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width">
-
+        <link rel="stylesheet" href="reset.css">        
+        <link rel="stylesheet" href="style.css">        
         <title>ONE - Encriptador Challenge</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    
     </head>
 
     <body>
-
         <header>
-            <h1 class="titulo-principal">Encriptador de texto</h1>
-        </header>        
-        
-        <main>  
+            <div class="header-container">
+                <div>
+                    <img class="titulo-imagen" src="img/Logo.png" alt="Encriptador">                    
+                </div>
+                <div>
+                    <p class="titulo-texto">Encriptador de texto</p>
+                    <p class="subtexto">Reto del encriptador de texto</p>
+                </div>
+                <div class="container-fluid">
+                    <ul class="navbar">                        
+                        <li class="nav-item">Sign on</li>
+                    </ul>    
+                </div>
+            </div>            
+        </header>
+        <main> 
+            <section class="encriptador">
+                <div class="contenedor_texto">
+                    <textarea id="textoATrabajar" cols="70" rows="10"></textarea>                        
+                </div>
+                <div class="contenedor_botones">
+                    <button onclick="encriptarTexto();" class="container__boton">Encriptar</button>
+                    <button onclick="desencriptarTexto();" class="container__boton">Desencriptar</button>
+                </div>
+            </section>
+            <section class="resultado">
+                <div class="contenedor_resultado">
+                    <textarea id="textoResultado" cols="70" rows="10"></textarea>
+                </div>
+                <div class="contenedor_botones">
+                    <button class="container__boton">Guardar</button>
+                </div>                                        
+            </section>
         </main> 
-
-        <footer>
-            <p class="copyright">&copy Copyright ManuelGN - 2024</p>
-        </footer>
+        <script src="app.js"></script>
     </body>
 </html>
