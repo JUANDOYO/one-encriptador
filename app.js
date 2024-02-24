@@ -314,16 +314,40 @@ function desencriptarTexto(){
 
     let textoATrabajar = document.getElementById('textoATrabajar').value;
     console.log("Texto a trabajar: " + textoATrabajar);
-    
-    // Verificamos que sea un texto valido
-    if (verificarTexto(textoATrabajar)){        
-        // Si es un texto valido encriptarmos el mensaje 
-        let textoResultado = desencriptar(textoATrabajar);
-        // Mostramos el mensaje encriptado
-        mostrarMensajeEncriptado(document.getElementById('textoResultado'), textoResultado);  
-        // Reestablememos valores     
-        console.log("Ya termine");
+
+    if (textoATrabajar == ""){
+        // Texto vacio
+        mensajeError = "Debe introducir un texto";
+        mostrarMensajeEncriptado(document.getElementById('textoResultado'), mensajeError);  
+         
+    }else{
+        // Verificamos que sea un texto valido
+        if (verificarTexto(textoATrabajar)){        
+            // Si es un texto valido encriptarmos el mensaje 
+            let textoResultado = desencriptar(textoATrabajar);
+            // Mostramos el mensaje encriptado
+            mostrarMensajeEncriptado(document.getElementById('textoResultado'), textoResultado);  
+            // Reestablememos valores     
+            console.log("Ya termine");
+        }else{
+            mensajeError = mensajeError + "\nEl programa solo funciona con letras minúsculas. \nNo deben ser utilizados letras con acentos ni caracteres especiales";
+            // Mostramos el mensaje encriptado
+            mostrarMensajeEncriptado(document.getElementById('textoResultado'), mensajeError);              
+        }
     }
-    return;  
+
+    // Limpiamos el area de trabajo
+    mostrarMensajeEncriptado(document.getElementById('textoATrabajar'), "");
+    return;    
 }
 
+function guardarTexto(){
+
+    // Texto a copiar
+    let textoATrabajar = document.getElementById('textoResultado').value;
+    console.log("Texto a guardar");
+    console.log(textoATrabajar);
+
+    navigator.clipboard.writeText(textoATrabajar);
+
+}
