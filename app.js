@@ -1,10 +1,5 @@
 let mensajeError = "";
-const LLAVEA = ["a", "ai"];
-const LLAVEE = ["e", "enter"];
-const LLAVEI = ["i", "imes"];
-const LLAVEO = ["o", "ober"];
-const LLAVEU = ["u", "ufat"];
- 
+
 function verificarTexto(texto) {
 
     console.log("Validar el texto");
@@ -30,8 +25,7 @@ function remplazaTexto(textoOriginal, textoARemplazar, textoNuevo) {
     // Obtenemos el tamaño de cada texto
     let contadorOriginal = textoOriginal.length;
     let contadorTextoRemplazar = textoARemplazar.length;
-    let contadorTextoNuevo = textoNuevo.length;
-
+    
     // Inicializamos contadores
     let i = 0;
     let j = 0;
@@ -67,17 +61,6 @@ function remplazaTexto(textoOriginal, textoARemplazar, textoNuevo) {
 
     return textoRemplazado;    
 }
-/*
-function remplazaCaracter(caracterAValidar, llave)
-{
-    // Obtenemos el tamaño de las llaves
-    let textoLlave = llave[0].length;
-    let textoLlaveValor = llave[1].length;
-    
-    // Verificamos, si el caracter a
-    if()
-}*/
-
 
 function encriptar(texto){
 
@@ -86,12 +69,6 @@ function encriptar(texto){
     // Remplaza texto
     console.log("Remplaza texto " + texto);
     
-    //let textoremplazado = "";
-    //textoremplazado = remplazaTexto(texto, "a", "ai");
-    //console.log("Termina texto A " + textoremplazado);
-    //textoremplazado = remplazaTexto(texto, "e", "enter");
-    //console.log("Termina texto E " + textoremplazado);
-
     for (let i = 0; i < texto.length; i++)
     {
         //let caracter = texto.charAt(i);
